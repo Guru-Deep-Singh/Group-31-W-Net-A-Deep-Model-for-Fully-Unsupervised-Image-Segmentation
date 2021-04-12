@@ -60,35 +60,3 @@ class NCutLoss2D(nn.Module):
 
         return num_classes - loss
 
-
-class OpeningLoss2D(nn.Module):
-    r"""Computes the Mean Squared Error between computed class probabilities their grey opening.  Grey opening is a
-    morphology operation, which performs an erosion followed by dilation.  Conceptually, this encourages the network
-    to return sharper boundaries to objects in the class probabilities.
-
-    NOTE:  Original loss term -- not derived from the paper for NCutLoss2D."""
-
-    def __init__(self, radius: int = 2):
-        r"""
-        :param radius: Radius for the channel-wise grey opening operation
-        """
-        super(OpeningLoss2D, self).__init__()
-        self.radius = radius
-
-    def forward(self, labels: Tensor, *args) -> Tensor:
-        r"""Computes the Opening loss -- i.e. the MSE due to performing a greyscale opening operation.
-
-        :param labels: Predicted class probabilities
-        :param args: Extra inputs, in case user also provides input/output image values.
-        :return: Opening loss
-        """
-        smooth_labels = labels.clone().detach().cpu().numpy()
-        for i in range(labels.shape[0]):
-            for j in range(labels.shape[1]):
-                smooth_labels[i, j] = grey_opening(smooth_labels[i, j], self.radius)
-
-        smooth_labels = torch.from_numpy(smooth_labels.astype(np.float32))
-        if labels.device.type == 'cuda':
-            smooth_labels = smooth_labels.cuda()
-
-        return nn.MSELoss()(labels, smooth_labels.detach())
