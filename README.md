@@ -6,8 +6,16 @@
 In this repository we will describe our implementation to reproduce the deep learning model: “W-Net: A Deep Model for Fully Unsupervised Image Segmentation” [[1]](https://arxiv.org/abs/1711.08506) in Pytorch. We are doing this for a student assignment for the course Deep Learning 2020 – 2021 at Delft University of Technology. 
 W-Net is a deep learning model that is used for unsupervised image segmentation. This is becoming increasingly important because image labelling is time consuming and it is difficult to obtain in novel domains. The W-Net architecture consists of an encoder that outputs the image segmentations, and a decoder that reconstructs the images from these segmentations. We have modified and concatenated three existing Github repositories to do so. 
 
+##### BSDS300
 ![alt text](https://github.com/Guru-Deep-Singh/Group-31-W-Net-A-Deep-Model-for-Fully-Unsupervised-Image-Segmentation/blob/main/Preds/pred_300/Figure_6.png)
 ![alt text](https://github.com/Guru-Deep-Singh/Group-31-W-Net-A-Deep-Model-for-Fully-Unsupervised-Image-Segmentation/blob/main/Preds/pred_300/Figure_5.png)
+![alt text](https://github.com/Guru-Deep-Singh/Group-31-W-Net-A-Deep-Model-for-Fully-Unsupervised-Image-Segmentation/blob/main/Preds/pred_300/Figure_4.png)
+
+##### BSD500
+![alt text](https://github.com/Guru-Deep-Singh/Group-31-W-Net-A-Deep-Model-for-Fully-Unsupervised-Image-Segmentation/blob/main/Preds/pred_500/Figure_15.png)
+![alt text](https://github.com/Guru-Deep-Singh/Group-31-W-Net-A-Deep-Model-for-Fully-Unsupervised-Image-Segmentation/blob/main/Preds/pred_500/Figure_12.png)
+![alt text](https://github.com/Guru-Deep-Singh/Group-31-W-Net-A-Deep-Model-for-Fully-Unsupervised-Image-Segmentation/blob/main/Preds/pred_500/Figure_14.png)
+
 ## Adapted Repositories
 - [Base Repository](https://github.com/gr-b/W-Net-Pytorch)
 - [N_Cut Loss Adaptation](https://github.com/fkodom/wnet-unsupervised-image-segmentation)
