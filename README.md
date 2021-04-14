@@ -1,6 +1,6 @@
 # Group-31-W-Net-A-Deep-Model-for-Fully-Unsupervised-Image-Segmentation
 ##### Author 1 - Guru Deep Singh (g.d.singh@student.tudelft.nl)   
-##### Author 2 - Nadine Duursman
+##### Author 2 - Nadine Duursman (nduursma@student.tudelft.nl)
 
 ## Inroduction
 In this repository we will describe our implementation to reproduce the deep learning model: “W-Net: A Deep Model for Fully Unsupervised Image Segmentation” [[1]](https://arxiv.org/abs/1711.08506) in Pytorch. We are doing this for a student assignment for the course Deep Learning 2020 – 2021 at Delft University of Technology. 
